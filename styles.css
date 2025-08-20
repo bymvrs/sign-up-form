@@ -65,6 +65,24 @@
 
 body {
     line-height: 1.5;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    min-width: 500px;
+    background-image: url(./images/sidebar-image.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-right: 2px solid var(--light-gray);
+}
+
+.sidebar .logo {
+    position: relative;
+    width: 250px;
+    top: 50px;
+    left: 120px;
 }
 
 input, button {
