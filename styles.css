@@ -213,6 +213,10 @@ input, button {
     color: black;
 }
 
+.form-section a:hover {
+    text-decoration: underline;
+}
+
 .form-section .button-container {
     padding-bottom: 0;
 }
