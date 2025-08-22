@@ -136,7 +136,7 @@ input, button {
 }
 
 .form-section h1 + div {
-    margin-top: 1.5em;
+    margin-top: 2em;
     display: flex;
     gap: 2em;
 }
