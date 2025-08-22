@@ -99,12 +99,17 @@ input, button {
     flex: 1;
 }
 
+.form-section .text-container {
+    padding: 50px 60px 20px 60px;
+}
+
+
 .form-section .text-container span {
     font-style: italic;
 }
 
-.form-section .text-container, .form-section .button-container {
-    padding: 60px;
+.form-section .button-container {
+    padding: 40px;
 }
 
 .form-section p {
@@ -116,7 +121,7 @@ input, button {
 }
 
 .form-section .form-container {
-    padding: 40px 60px;
+    padding: 40px 60px 20px 60px;
     background-color: #fdfdfd;
     box-shadow: 0px 4px 5.7px -4px rgba(0, 0, 0, 0.1), 0px -4px 5.7px -4px rgba(0, 0, 0, 0.1); 
 }
@@ -138,13 +143,17 @@ input, button {
 .form-section label {
     display: block;
     font-weight: 700;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.5em;
+}
+
+.form-section label span {
+    color: gray;
 }
 
 .form-section input {
     background-color: var(--light-gray);
     border: 1px solid var(--default-border);
-    width: 310px;
+    width: 335px;
     height: 35px;
     border-radius: 5px;
     margin-bottom: 1em;
@@ -155,8 +164,27 @@ input, button {
     outline: 2px solid var(--focused-border);   
 }
 
-.form-section input:invalid {
+.form-section input:user-invalid {
     outline: 2px solid var(--invalid-border);
+}
+
+.form-section input + p {
+    visibility: hidden;
+    margin-bottom: .2em;
+}
+
+.form-section input:user-valid {
+    outline: 2px solid green;
+}
+
+.form-section input:user-invalid + p::before {
+    content: url(./images/invalid.svg);
+}
+
+.form-section input:user-invalid + p {
+    visibility: visible;
+    display: flex;
+    gap: 4px;
 }
 
 .form-section button {
@@ -183,4 +211,12 @@ input, button {
 
 .form-section .button-container {
     padding-bottom: 0;
+}
+
+.form-section input + p {
+    margin-top: -5px;
+    color: var(--invalid-border);
+    font-weight: 500;
+    font-size: 1em;
+    margin-bottom: .5em;
 }

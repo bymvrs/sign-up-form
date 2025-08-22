@@ -22,19 +22,25 @@
                 <div>
                     <div>
                         <label for="first-name">FIRST NAME</label>
-                        <input type="text" name="first-name" id="first-name">
+                        <input type="text" name="first-name" id="first-name" autocomplete="given-name" required>
+                        <p>Please enter your name.</p>
                         <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" autocomplete="email" required>
+                        <p>Please enter a valid address.</p>
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="password" id="password">
+                        <input type="password" name="password" id="password" autocomplete="new-password" pattern="\w{8,}" required>
+                        <p>Password must have at least 8 characters.</p>
                     </div>
                     <div>
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" name="last-name" id="last-name">
-                        <label for="phone-number">PHONE NUMBER</label>
-                        <input type="tel" name="phone-number" id="phone-number">
+                        <input type="text" name="last-name" id="last-name" autocomplete="family-name" required>
+                        <p>Please enter your last name.</p>
+                        <label for="phone-number">PHONE NUMBER <span>(optional)</span></label>
+                        <input type="tel" name="phone-number" id="phone-number" pattern="\d{9}" autocomplete="tel">
+                        <p>Please enter a 9 digit number.</p>
                         <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" name="confirm-password" id="confirm-password">
+                        <input type="password" name="confirm-password" id="confirm-password" autocomplete="new-password" pattern="\w{8,}" required>
+                        <p>Password must have at least 8 characters.</p>
                     </div>
                 </div>
             </form>
