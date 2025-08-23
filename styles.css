@@ -169,12 +169,12 @@ input, button {
     margin-bottom: .2em;
 }
 
-.form-section input:user-valid {
-    outline: 2px solid green;
+.form-section input + p::before {
+    content: url(./images/invalid.svg);
 }
 
-.form-section input:user-invalid + p::before {
-    content: url(./images/invalid.svg);
+.form-section input:user-valid {
+    outline: 2px solid green;
 }
 
 .form-section input:user-invalid + p {
